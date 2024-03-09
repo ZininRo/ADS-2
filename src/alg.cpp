@@ -57,14 +57,11 @@ double sinn(double x, uint16_t count) {
 }
 
 double cosn(double x, uint16_t count) {
-
     double result = 1;
-    for (uint16_t i = 0; i < count; i++){
-        if(i % 2 == 0) {
-            result -= calcItem(x, 2 * i + 2);
-        } else {
-            result += calcItem(x, 2 * i + 2);
-        }
+    int now = 1;
+    for (uint16_t i = 2; i < 2*count; i += 2) {
+        result += calcItem(x, i) * ((now == 1) ? -1 : 1);
+        now *= -1;
     }
     return result;
 }
