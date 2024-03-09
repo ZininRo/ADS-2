@@ -4,7 +4,6 @@
 
 
 double pown(double value, uint16_t n) {
-
     double num_pow = 1.0;
     while (n > 0) {
         if (n % 2 == 1) {
@@ -17,7 +16,6 @@ double pown(double value, uint16_t n) {
 }
 
 uint64_t fact(uint16_t n) {
-
     uint64_t fact_of_num = 1;
     for (uint16_t i = 1; i <= n; i++) {
         fact_of_num *= i;
